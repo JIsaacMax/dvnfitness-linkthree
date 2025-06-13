@@ -19,7 +19,7 @@ export const siteConfig: SiteConfig = {
   logo: "assets/logo1.jpg",
   altLogo: "Logo da DVN Fitness",
   links: {
-    whatsapp: "https://wa.me/5532999999999",
+    whatsapp: "https://wa.me/5532999045504",
     whatsappGroup: "https://chat.whatsapp.com/E20mQZR6IkAC2meVodUADF",
     instagram: "https://instagram.com/dvnfitness",
     googleMaps: "https://maps.app.goo.gl/EuvPwCFKf2SS3n7L9",
