@@ -5,6 +5,7 @@ export interface SiteConfig {
   altLogo: string;
   links: {
     whatsapp: string;
+    whatsappGroup: string;
     instagram: string;
     googleMaps: string;
     matricula: string;
@@ -19,6 +20,7 @@ export const siteConfig: SiteConfig = {
   altLogo: "Logo da DVN Fitness",
   links: {
     whatsapp: "https://wa.me/5532999999999",
+    whatsappGroup: "https://chat.whatsapp.com/E20mQZR6IkAC2meVodUADF",
     instagram: "https://instagram.com/dvnfitness",
     googleMaps: "https://maps.app.goo.gl/EuvPwCFKf2SS3n7L9",
     matricula: "#",

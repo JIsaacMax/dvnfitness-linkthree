@@ -48,92 +48,95 @@ const ReservaQuadraPage: React.FC = () => {
 
     return (
         <div className="w-full h-full max-w-4xl mx-auto px-4">
-            {showReservaModal && <ModalReserva onSubmit={handleFinalizeReservation} onClose={() => setShowReservaModal(false)} />}
-            {showFeedbackModal && <FeedbackModal {...feedback} onClose={() => setShowFeedbackModal(false)} />}
-            <div className="relative sm:h-80 w-full h-full mb-20 rounded-b-3xl overflow-visible">
-                <img className="absolute inset-0 w-full h-full object-cover rounded-b-3xl"
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" alt="Quadra de esportes" />
-                <div className="absolute inset-0 bg-black/50 rounded-b-3xl"></div>
-                <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
-                    <div className="w-24 h-24 rounded-full bg-gray-800 border-4 border-green-500 flex items-center justify-center p-1">
-                        <img src={siteConfig.logo} alt={siteConfig.altLogo} className="rounded-full w-full h-full object-cover" />
+            <>
+                {/* {showReservaModal && <ModalReserva onSubmit={handleFinalizeReservation} onClose={() => setShowReservaModal(false)} />}
+                {showFeedbackModal && <FeedbackModal {...feedback} onClose={() => setShowFeedbackModal(false)} />} */}
+                <div className="relative sm:h-80 w-full h-full mb-20 rounded-b-3xl overflow-visible">
+                    <img className="absolute inset-0 w-full h-full object-cover rounded-b-3xl"
+                        src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" alt="Quadra de esportes" />
+                    <div className="absolute inset-0 bg-black/50 rounded-b-3xl"></div>
+                    <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
+                        <div className="w-24 h-24 rounded-full bg-gray-800 border-4 border-green-500 flex items-center justify-center p-1">
+                            <img src={siteConfig.logo} alt={siteConfig.altLogo} className="rounded-full w-full h-full object-cover" />
+                        </div>
                     </div>
+                    <button onClick={() => navigate('/')} className="absolute top-4 left-4 bg-black/30 text-white p-2 rounded-full backdrop-blur-sm hover:bg-black/50"> <ArrowLeft size={24} /> </button>
                 </div>
-                <button onClick={() => navigate('/')} className="absolute top-4 left-4 bg-black/30 text-white p-2 rounded-full backdrop-blur-sm hover:bg-black/50"> <ArrowLeft size={24} /> </button>
-            </div>
-            <div className="text-center mb-8">
-                <h1 className="text-4xl font-extrabold text-white">Reserva de Quadra</h1>
-                <p className="text-gray-400">Agende seu horário de forma rápida e fácil.</p>
-                <div className="flex justify-center gap-6 mt-4 text-sm">
-                    <p><strong className="text-green-400">{reservas.length}</strong> Reservas Ativas</p>
-                    <p><strong className="text-green-400">2</strong> Torneios Agendados</p>
-                </div>
-            </div>
-            <div className="bg-gray-800/50 p-6 rounded-2xl border border-gray-700 backdrop-blur-sm">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
-                    <div>
-                        <label htmlFor="quadra" className="block text-sm font-medium text-gray-300 mb-1">Esporte</label>
-                        <select
-                            id="quadra"
-                            value={form.quadra}
-                            onChange={e => setForm({ ...form, quadra: e.target.value })}
-                            className="w-full p-3 bg-gray-900 border-gray-700 border-2 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
-                        >
-                            {quadras.map(q => <option key={q.id} value={q.id}>{q.nome}</option>)}
-                        </select>
+                {/* <div className="text-center mb-8">
+                    <h1 className="text-4xl font-extrabold text-white">Reserva de Quadra</h1>
+                    <p className="text-gray-400">Agende seu horário de forma rápida e fácil.</p>
+                    <div className="flex justify-center gap-6 mt-4 text-sm">
+                        <p><strong className="text-green-400">{reservas.length}</strong> Reservas Ativas</p>
+                        <p><strong className="text-green-400">2</strong> Torneios Agendados</p>
                     </div>
-                    <div>
-                        <label htmlFor="data" className="block text-sm font-medium text-gray-300 mb-1">Data</label>
-                        <input
-                            type="date"
-                            id="data"
-                            value={form.data}
-                            onChange={e => setForm({ ...form, data: e.target.value })}
-                            className="w-full h-3/5 p-3 bg-gray-900 border-gray-700 border-2 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
-                        />
+                </div> */}
+                <h1 className="text-4xl font-extrabold text-white text-center">EM BREVE <br />Quadra em construção</h1>
+                {/* <div className="bg-gray-800/50 p-6 rounded-2xl border border-gray-700 backdrop-blur-sm">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                        <div>
+                            <label htmlFor="quadra" className="block text-sm font-medium text-gray-300 mb-1">Esporte</label>
+                            <select
+                                id="quadra"
+                                value={form.quadra}
+                                onChange={e => setForm({ ...form, quadra: e.target.value })}
+                                className="w-full p-3 bg-gray-900 border-gray-700 border-2 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                            >
+                                {quadras.map(q => <option key={q.id} value={q.id}>{q.nome}</option>)}
+                            </select>
+                        </div>
+                        <div>
+                            <label htmlFor="data" className="block text-sm font-medium text-gray-300 mb-1">Data</label>
+                            <input
+                                type="date"
+                                id="data"
+                                value={form.data}
+                                onChange={e => setForm({ ...form, data: e.target.value })}
+                                className="w-full h-3/5 p-3 bg-gray-900 border-gray-700 border-2 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="horarioInicio" className="block text-sm font-medium text-gray-300 mb-1">Horário Início</label>
+                            <select
+                                id="horarioInicio"
+                                value={form.horarioInicio}
+                                onChange={e => setForm({ ...form, horarioInicio: e.target.value })}
+                                className="w-full p-3 bg-gray-900 border-gray-700 border-2 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                            >
+                                <option value="">Selecione</option>
+                                {horarios.map(h => (
+                                    <option key={h} value={h} disabled={horariosOcupados.includes(h)}>
+                                        {h}{horariosOcupados.includes(h) ? ' (Ocupado)' : ''}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                        <div>
+                            <label htmlFor="horarioFim" className="block text-sm font-medium text-gray-300 mb-1">Horário Final</label>
+                            <select
+                                id="horarioFim"
+                                value={form.horarioFim}
+                                onChange={e => {
+                                    const novoHorarioFim = e.target.value;
+                                    if (novoHorarioFim && form.horarioInicio && novoHorarioFim < form.horarioInicio) {
+                                        alert('O horário final não pode ser menor que o horário de início.');
+                                    } else {
+                                        setForm({ ...form, horarioFim: novoHorarioFim });
+                                    }
+                                }}
+                                className="w-full p-3 bg-gray-900 border-gray-700 border-2 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+                            >
+                                <option value="">Selecione</option>
+                                {horarios.map(h => (
+                                    <option key={h} value={h} disabled={horariosOcupados.includes(h)}>
+                                        {h}{horariosOcupados.includes(h) ? ' (Ocupado)' : ''}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
                     </div>
-                    <div>
-                        <label htmlFor="horarioInicio" className="block text-sm font-medium text-gray-300 mb-1">Horário Início</label>
-                        <select
-                            id="horarioInicio"
-                            value={form.horarioInicio}
-                            onChange={e => setForm({ ...form, horarioInicio: e.target.value })}
-                            className="w-full p-3 bg-gray-900 border-gray-700 border-2 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
-                        >
-                            <option value="">Selecione</option>
-                            {horarios.map(h => (
-                                <option key={h} value={h} disabled={horariosOcupados.includes(h)}>
-                                    {h}{horariosOcupados.includes(h) ? ' (Ocupado)' : ''}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                    <div>
-                        <label htmlFor="horarioFim" className="block text-sm font-medium text-gray-300 mb-1">Horário Final</label>
-                        <select
-                            id="horarioFim"
-                            value={form.horarioFim}
-                            onChange={e => {
-                                const novoHorarioFim = e.target.value;
-                                if (novoHorarioFim && form.horarioInicio && novoHorarioFim < form.horarioInicio) {
-                                    alert('O horário final não pode ser menor que o horário de início.');
-                                } else {
-                                    setForm({ ...form, horarioFim: novoHorarioFim });
-                                }
-                            }}
-                            className="w-full p-3 bg-gray-900 border-gray-700 border-2 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
-                        >
-                            <option value="">Selecione</option>
-                            {horarios.map(h => (
-                                <option key={h} value={h} disabled={horariosOcupados.includes(h)}>
-                                    {h}{horariosOcupados.includes(h) ? ' (Ocupado)' : ''}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                </div>
-                <button onClick={handleCheckAvailability} className="w-full bg-green-500 text-white font-bold p-4 rounded-lg hover:bg-green-600 transition-colors">Verificar Disponibilidade</button>
-            </div>
+                    <button onClick={handleCheckAvailability} className="w-full bg-green-500 text-white font-bold p-4 rounded-lg hover:bg-green-600 transition-colors">Verificar Disponibilidade</button>
+                </div> */}
+            </>
         </div>
     );
 };

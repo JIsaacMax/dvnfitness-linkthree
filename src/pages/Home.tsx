@@ -23,6 +23,7 @@ const HomePage: React.FC = () => {
                         <li><LinkButton href={siteConfig.links.matricula} text="MATRICULE-SE" isPrimary /></li>
                         <li><LinkButton href={siteConfig.links.whatsapp} icon={<MessageCircle />} text="WhatsApp" /></li>
                         <li><LinkButton href={siteConfig.links.instagram} icon={<Instagram />} text="Instagram" /></li>
+                        <li><LinkButton href={siteConfig.links.whatsappGroup} icon={<MessageCircle />} text="Grupo do WhatsApp" /></li>
                         <li><LinkButton href={siteConfig.links.googleMaps} icon={<MapPin />} text="Como chegar!" /></li>
                         <li><LinkButton to="/reserva" text="Reservar Quadra" /></li>
                     </ul>
